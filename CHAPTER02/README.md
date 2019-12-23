@@ -17,7 +17,7 @@ return 戻り値
 
 ```
 func profile(age:Int, weight:Int){
-print("age:\(age)", "weight:\(weight)Kg", separator:", ")
+  print("age:\(age)", "weight:\(weight)Kg", separator:", ")
 }
 
 profile( 20, weight: 50)
@@ -31,7 +31,7 @@ profile( 20, weight: 50)
 
 ```
 func profile(age a:Int, weight w:Int){
-print("age:\(a)", "weight:\(w)Kg", separator:", ")
+  print("age:\(a)", "weight:\(w)Kg", separator:", ")
 }
 
 profile(age: 20, weight: 50)
@@ -49,12 +49,12 @@ profile(age: 20, weight: 50)
 var cnt = 0
 
 func count(inout i:Int){
-i = i + 1; 
+  i = i + 1; 
 }
 
 for a in 1...9 {
-count(&cnt)
-print(cnt)
+  count(&cnt)
+  print(cnt)
 }
 ```
 関数に変数を入れるときに&を忘れずに
@@ -65,9 +65,9 @@ print(cnt)
 
 ```
 func week(var i:Int){
-if i > 7 {
-i = 1
-}
+  if i > 7 {
+    i = 1
+  }
 }
 ```
 借り引数名の前にvarをつけるだけ
@@ -76,10 +76,10 @@ i = 1
 
 ```
 func circle(pi:Float) -> (Float -> Float) {
-func circle_area (radius:Float) -> Float {
-return radius * radius * pi
-}
-return circle_area
+  func circle_area (radius:Float) -> Float {
+    return radius * radius * pi
+  }
+  return circle_area
 }
 
 let circle1 = circle(3.14)
